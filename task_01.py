@@ -16,20 +16,9 @@ def encrypt(text, shift):
     return encrypted_text
 
 
-# to decrypt the text
+# to decrypt the text using encrypt() function
 def decrypt(text, shift):
-    decrypted_text = ""
-    for char in text:
-        if char.isalpha():
-            shift_val = (-shift) % 26
-            if char.islower():
-                new_char = chr(ord('a') + (ord(char) - ord('a') + shift_val) % 26)
-            elif char.isupper():
-                new_char = chr(ord('A') + (ord(char) - ord('A') + shift_val) % 26)
-            decrypted_text += new_char
-        else:
-            decrypted_text += char
-    return decrypted_text
+    return encrypt(text,-shift)
 
 
 # main() function
