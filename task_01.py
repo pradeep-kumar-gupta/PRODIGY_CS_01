@@ -14,3 +14,21 @@ def encrypt(text, shift):
         else:
             encrypted_text += char
     return encrypted_text
+
+# main() function
+
+while True:
+    print("Choose an option:")
+    print("1. Encrypt a message")
+    print("2. Exit")
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        message = input("Enter the message to encrypt: ")
+        shift = int(input("Enter the shift value: "))
+        encrypted_message = encrypt(message, shift)
+        print("Encrypted message:", encrypted_message)
+    elif choice == 2:
+        break
+    else:
+        print("Invalid choice. Please try again.")
